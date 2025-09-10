@@ -21,7 +21,6 @@ import {
 } from 'react';
 import './global.css';
 
-import fetch from '@/__create/fetch';
 // @ts-ignore
 import { SessionProvider } from '@auth/create/react';
 import { useNavigate } from 'react-router';
@@ -32,10 +31,6 @@ import { LoadFonts } from 'virtual:load-fonts.jsx';
 import type { Route } from './+types/root';
 
 export const links = () => [];
-
-if (globalThis.window && globalThis.window !== undefined) {
-  globalThis.window.fetch = fetch;
-}
 
 function SharedErrorBoundary({
   isOpen,
